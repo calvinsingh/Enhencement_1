@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:background="@drawable/pg01"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layoutHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/pghead"
+    android:padding="10dp"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <!--  image  -->
+
+    <TextView
+      android:id="@+id/navTextCrimeCategory"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:background="@drawable/bg_grey"
+      android:padding="10dp"
+      android:text="Category "
+      android:textColor="@color/white"
+      android:textSize="25sp"
+      app:layout_constraintEnd_toStartOf="@+id/navTextCrimeLocation"
+      app:layout_constraintHorizontal_bias="0.833"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+      android:id="@+id/navTextCrimeLocation"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="20dp"
+      android:background="@drawable/bg_dark"
+      android:padding="10dp"
+      android:text="Location "
+      android:textColor="@color/white"
+      android:textSize="25sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/imageMenu" />
+
+    <ImageView
+      android:id="@+id/imageMenu"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_marginEnd="40dp"
+      android:contentDescription="@string/app_name"
+      android:src="@drawable/ic_menu"
+      app:layout_constraintBottom_toBottomOf="@+id/textHello"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/textHello"
+      app:tint="@color/black" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:layout_marginTop="100dp"
+    android:id="@+id/recycler_view"
+    android:layout_width="match_parent"
+    android:layout_height="650dp"
+    tools:listitem="@layout/stat_crime_category_item" />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

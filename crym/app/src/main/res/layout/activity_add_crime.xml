@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@drawable/pg01"
+  android:orientation="vertical"
+  tools:context=".AddReportActivity">
+
+  <EditText
+    android:id="@+id/et_crime_title"
+    android:layout_width="350dp"
+    android:layout_height="50dp"
+    android:background="@drawable/edittext_bg"
+    android:hint="Title e.g. Burglar"
+    android:inputType="text"
+    android:textColor="@color/black"
+    app:layout_constraintBottom_toTopOf="@+id/et_crime_description"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.491"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.532" />
+
+  <EditText
+    android:id="@+id/et_crime_description"
+    android:layout_width="350dp"
+    android:layout_height="80dp"
+    android:layout_marginBottom="140dp"
+    android:background="@drawable/edittext_bg"
+    android:hint="Description e.g. Stolen items bag, screen, radio"
+    android:textColor="@color/black"
+    android:inputType="textMultiLine"
+    app:layout_constraintBottom_toTopOf="@+id/btn_add_crime"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.508"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <EditText
+    android:id="@+id/et_crime_location"
+    android:layout_width="350dp"
+    android:layout_height="50dp"
+    android:layout_marginTop="400dp"
+    android:textColor="@color/black"
+    android:background="@drawable/edittext_bg"
+    android:hint="Estate eg., Kaloleni"
+    android:inputType="text"
+    app:layout_constraintBottom_toTopOf="@+id/et_crime_description"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.508"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.0" />
+
+  <Button
+    android:id="@+id/btn_add_crime"
+    android:layout_width="350dp"
+    android:layout_height="50dp"
+    android:layout_marginBottom="20dp"
+    android:background="@color/white"
+    android:text="Create Awareness"
+    android:textColor="@color/black"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.508"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/et_crime_location"
+    app:layout_constraintVertical_bias="0.211" />
+
+  <Spinner
+    android:id="@+id/counties_spinner"
+    android:layout_width="350dp"
+    android:textColor="@color/black"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    app:layout_constraintBottom_toTopOf="@+id/et_crime_description"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.508"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/et_crime_title"
+    app:layout_constraintVertical_bias="0.602" />
+
+  <TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="36dp"
+    android:layout_marginTop="84dp"
+    android:text="Title eg: Burglar"
+    android:textColor="@color/white"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/textView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="36dp"
+    android:layout_marginBottom="4dp"
+    android:text="County"
+    android:textColor="@color/white"
+    app:layout_constraintBottom_toTopOf="@+id/counties_spinner"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <TextView
+    android:id="@+id/textView3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="36dp"
+    android:text="Description"
+    android:textColor="@color/white"
+    app:layout_constraintBottom_toTopOf="@+id/et_crime_description"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <TextView
+    android:id="@+id/textView4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="40dp"
+    android:layout_marginBottom="8dp"
+    android:text="Estate"
+    android:textColor="@color/white"
+    app:layout_constraintBottom_toTopOf="@+id/et_crime_location"
+    app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

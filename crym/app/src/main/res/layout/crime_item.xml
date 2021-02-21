@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginEnd="8dp"
+  android:layout_marginStart="8dp"
+  android:layout_marginTop="8dp"
+  >
+  <RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:padding="8dp">
+
+    <TextView
+      android:id="@+id/tv_crime_location"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_marginEnd="24dp"
+      android:text="South C" />
+
+    <TextView
+      android:id="@+id/tv_crime_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_toStartOf="@id/tv_crime_location"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:text="Rape"/>
+
+    <TextView
+      android:id="@+id/tv_crime_description"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/tv_crime_location"
+      android:layout_marginTop="7dp"
+      android:text="Description" />
+
+    <TextView
+      android:id="@+id/tv_crime_cases"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/tv_crime_location"
+      android:layout_alignParentEnd="true"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="7dp"
+      android:layout_marginEnd="24dp"
+      android:layout_toStartOf="@id/tv_crime_description"
+      android:text="45" />
+
+    <TextView
+      android:id="@+id/textView5"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="8dp"
+      android:layout_toStartOf="@+id/tv_crime_location"
+      android:text="County :" />
+
+    <TextView
+      android:id="@+id/textView6"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBottom="@+id/tv_crime_cases"
+      android:layout_marginEnd="17dp"
+      android:layout_marginBottom="0dp"
+      android:layout_toStartOf="@+id/tv_crime_cases"
+      android:text="Estate :" />
+
+  </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
